@@ -20,11 +20,14 @@
     gtag('config', 'G-MHZPE54BPP');
   </script>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{
       --bg:#f8fafc; --text:#0f172a; --muted:#475569; --line:#e2e8f0; --brand:#0f766e; --brand2:#0d9488;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;line-height:1.7}
     .wrap{max-width:980px;margin:0 auto;padding:0 16px}
     header{padding:56px 0 28px;background:linear-gradient(180deg,#ecfeff,#f8fafc)}
@@ -56,6 +59,14 @@
   </style>
 </head>
 <body>
+  <nav class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-3">
+      <ul class="flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
   <header>
     <div class="wrap">
       <p class="sub">一級建築士在籍 / 東京都対応 / リノベ・一軒家・店舗改装</p>
@@ -121,25 +132,34 @@
       <details><summary>工事会社の紹介はできますか？</summary><p>ご要望に応じて候補をご案内します。</p></details>
     </section>
 
-    <section id="contact" class="card">
-      <h2>無料相談（30分）</h2>
-      <p>「何から始めればよいか分からない」段階でも大丈夫です。まずは現状と希望をお聞かせください。</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdMDOQv5qdl83FNBzP0y92yDCqQRX48bLqez6150GEGbMLZjA/viewform" target="_blank" rel="noopener noreferrer">フォームで相談する</a>
-        <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSdMDOQv5qdl83FNBzP0y92yDCqQRX48bLqez6150GEGbMLZjA/viewform" target="_blank" rel="noopener noreferrer">実績ヒアリングに回答する</a>
-      </div>
-      <p class="note">※ LINEビジネスアカウントは準備中。現在はフォーム窓口で受付しています。</p>
-    </section>
 
     <div class="sticky-cta wrap">
       <div class="btns" style="justify-content:flex-end; margin-top:18px;">
         <a class="btn btn-primary" href="#contact">無料相談する</a>
       </div>
     </div>
+
+    <section id="contact" class="py-20 bg-white" data-aos="fade-up">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold tracking-wide mb-4">CONTACT</h2>
+        <p class="text-slate-600 mb-8">お仕事のご依頼やご相談は、以下のフォームよりお気軽にお問い合わせください。</p>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdMDOQv5qdl83FNBzP0y92yDCqQRX48bLqez6150GEGbMLZjA/viewform?embedded=true"
+          class="w-full h-[800px] border-0 mx-auto max-w-4xl"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >読み込んでいます…</iframe>
+      </div>
+    </section>
   </main>
 
   <footer class="wrap">
     <p>© 建築士オフィス（仮）</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    if (window.AOS) AOS.init({ once: true, duration: 700 });
+  </script>
 </body>
 </html>
